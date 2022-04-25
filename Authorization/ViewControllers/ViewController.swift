@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     //User Name and Password
-    private let userName = "User"
-    private let password = "12345"
+    private let userName = User.getUser().userName
+    private let password = User.getUser().userPassword
     
     // I didn't need
 //    override func viewDidLoad() {
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let logInVC = segue.destination as? LogInViewController else {return}
-        logInVC.welcomeLabelProperty = userNameTF.text
+        logInVC.welcomeLabelProperty = userNameTF.text!
     }
 
     @IBAction func logInButtonPressed() {
