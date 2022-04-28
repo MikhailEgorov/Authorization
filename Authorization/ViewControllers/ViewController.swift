@@ -8,26 +8,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: IB Outlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    //User Name and Password
-    private let userName = User.getUser().userName
-    private let password = User.getUser().userPassword
+    // MARK: Private properties
+    private let user = User.getUser()
     
-    // I didn't need
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-    
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let logInVC = segue.destination as? LogInViewController else {return}
-        logInVC.welcomeLabelProperty = userNameTF.text!
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let logInVC = $0 as? LogInViewController {
+                logInVC.user = user
+            } else if let navigationVC = $0 as? UINavigationController {
+                guard let userInfoVC = navigationVC.topViewController as? UserInfoViewController else { return }
+                userInfoVC.user = user
+            }
+        }
     }
 
+    // MARK: IB Actions
     @IBAction func logInButtonPressed() {
-        if userNameTF.text != userName || passwordTF.text != password {
+        if userNameTF.text != user.userName || passwordTF.text != user.userPassword {
             showAlert(with: "Warning",
                       and: "Incorrect username or password",
                       textField: passwordTF)
@@ -35,11 +41,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameButtonPressed() {
-        showAlert(with: "Reminder of user name", and: "Name is \(userName)")
+        showAlert(with: "Reminder of user name", and: "Name is \(user.userName)")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(with: "Reminder of password", and: "Password is \(password)")
+        showAlert(with: "Reminder of password", and: "Password is \(user.userPassword)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

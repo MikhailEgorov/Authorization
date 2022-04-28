@@ -5,7 +5,6 @@
 //  Created by Егоров Михаил on 25.04.2022.
 //
 
-import Foundation
 struct User {
     let userName: String
     let userPassword: String
@@ -14,11 +13,7 @@ struct User {
     static func getUser () -> User {
         User.init(userName: "User",
                   userPassword: "12345",
-                  person: .init(firstName: "Mikhail",
-                                secondName: "Egorov",
-                                contacts: .init(email: "myEmail@google.com",
-                                                phoneNumber: 9830092,
-                                                address: "Planet Earth")))
+                  person: Person.getPerson())
     }
 }
 
@@ -26,10 +21,23 @@ struct Person {
     let firstName: String
     let secondName: String
     let contacts: Contact
+    
+    var fullName: String {
+        "\(firstName) \(secondName)"
+    }
+    
+    static func getPerson() -> Person {
+        Person(firstName: "Mikhail", secondName: "Egorov", contacts: Contact.getContact())
+    }
 }
 
 struct Contact {
     let email: String
-    let phoneNumber: Int
+    let phoneNumber: String
     let address: String
+    
+    static func getContact() -> Contact {
+        Contact(email: "myEmail@google.com", phoneNumber: "9210354907", address: "Planet Earth")
+    }
+    
 }

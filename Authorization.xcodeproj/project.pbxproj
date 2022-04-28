@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F749BF22803CE550017DC79 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F749BF12803CE550017DC79 /* LogInViewController.swift */; };
+		5F77E37A281A3CDA00FA4323 /* ContactsUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F77E379281A3CDA00FA4323 /* ContactsUserViewController.swift */; };
 		5F79FDF8280173850081A497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F79FDF7280173850081A497 /* AppDelegate.swift */; };
 		5F79FDFA280173850081A497 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F79FDF9280173850081A497 /* SceneDelegate.swift */; };
 		5F79FDFC280173850081A497 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F79FDFB280173850081A497 /* ViewController.swift */; };
@@ -15,10 +16,12 @@
 		5F79FE01280173860081A497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F79FE00280173860081A497 /* Assets.xcassets */; };
 		5F79FE04280173860081A497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F79FE02280173860081A497 /* LaunchScreen.storyboard */; };
 		5F84729228164757000DDF28 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F84729128164757000DDF28 /* User.swift */; };
+		5F9BDA812818F927009ADBE9 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BDA802818F927009ADBE9 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F749BF12803CE550017DC79 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		5F77E379281A3CDA00FA4323 /* ContactsUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUserViewController.swift; sourceTree = "<group>"; };
 		5F79FDF4280173850081A497 /* Authorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F79FDF7280173850081A497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F79FDF9280173850081A497 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		5F79FE03280173860081A497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F79FE05280173860081A497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F84729128164757000DDF28 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5F9BDA802818F927009ADBE9 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			children = (
 				5F79FDFB280173850081A497 /* ViewController.swift */,
 				5F749BF12803CE550017DC79 /* LogInViewController.swift */,
+				5F9BDA802818F927009ADBE9 /* UserInfoViewController.swift */,
+				5F77E379281A3CDA00FA4323 /* ContactsUserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,10 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F749BF22803CE550017DC79 /* LogInViewController.swift in Sources */,
+				5F9BDA812818F927009ADBE9 /* UserInfoViewController.swift in Sources */,
 				5F79FDFC280173850081A497 /* ViewController.swift in Sources */,
 				5F79FDF8280173850081A497 /* AppDelegate.swift in Sources */,
 				5F84729228164757000DDF28 /* User.swift in Sources */,
 				5F79FDFA280173850081A497 /* SceneDelegate.swift in Sources */,
+				5F77E37A281A3CDA00FA4323 /* ContactsUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

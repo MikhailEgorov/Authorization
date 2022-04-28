@@ -11,11 +11,13 @@ class LogInViewController: UIViewController {
 
     @IBOutlet var welcomeLabel: UILabel!
     
-    var welcomeLabelProperty = User.getUser().person.firstName
+    var user: User!
+    
+    //var welcomeLabelProperty = User.getUser().person.firstName
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, \(welcomeLabelProperty)"
+        welcomeLabel.text = "Welcome, \(user.person.fullName)"
     }
     
 }
